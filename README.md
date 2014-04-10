@@ -1,7 +1,5 @@
-pyalgorithms
-============
-
-###Python Algorithms
+Python Algorithms
+=================
 
 ![Al-Khwarizmi](http://www.biologie.uni-hamburg.de/b-online/library/history/alk.gif)
 
