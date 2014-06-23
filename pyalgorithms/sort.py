@@ -57,6 +57,26 @@ def mergesort(seq):
     return (left or right) + result
 
 
+def insertsort(seq):
+    """Insertion Sort
+    """
+    for i in range(1, len(seq)):
+        j = i
+        while j > 0 and seq[j-1] > seq[j]:
+            swap(seq, j-1, j)
+            j -= 1
+
+
+def selectsort(seq):
+    """Selection Sort
+    """
+    for i in range(len(seq)-1, 0, -1):
+        max_j = i
+        for j in range(i):
+            if seq[j] > seq[max_j]: max_j = j
+        swap(seq, max_j, i)
+
+
 if __name__ == "__main__":
     l = [5, 7, 0, 4, 3, 90, 56, 34]
     print l
@@ -67,3 +87,9 @@ if __name__ == "__main__":
     print l
     l = [5, 7, 0, 4, 3, 90, 56, 34]
     print mergesort(l)
+    l = [5, 7, 0, 4, 3, 90, 56, 34]
+    insertsort(l)
+    print l
+    l = [5, 7, 0, 4, 3, 90, 56, 34]
+    selectsort(l)
+    print l
