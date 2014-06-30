@@ -5,7 +5,7 @@
 
     Sorting implementation.
 
-    :copyright: (c) 2013 by fsp.
+    :copyright: (c) 2013 by Shipeng Feng.
     :license: BSD.
 """
 import random

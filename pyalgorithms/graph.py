@@ -5,7 +5,7 @@
 
     Graph implementation.
 
-    :copyright: (c) 2014 by fsp.
+    :copyright: (c) 2014 by Shipeng Feng.
     :license: BSD.
 """
 import random
