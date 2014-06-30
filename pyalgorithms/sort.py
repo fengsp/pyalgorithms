@@ -9,6 +9,7 @@
     :license: BSD.
 """
 import random
+import collections
 
 
 def swap(seq, x, y):
@@ -77,6 +78,17 @@ def selectsort(seq):
         swap(seq, max_j, i)
 
 
+def countsort(seq):
+    """Counting Sort
+    """
+    result, count_map = [], collections.defaultdict(list)
+    for i in seq:
+        count_map[i].append(i)
+    for k in range(min(count_map), max(count_map) + 1):
+        result.extend(count_map[k])
+    return result
+
+
 if __name__ == "__main__":
     l = [5, 7, 0, 4, 3, 90, 56, 34]
     print l
@@ -93,3 +105,5 @@ if __name__ == "__main__":
     l = [5, 7, 0, 4, 3, 90, 56, 34]
     selectsort(l)
     print l
+    l = [5, 7, 0, 4, 3, 90, 56, 34]
+    print countsort(l)
